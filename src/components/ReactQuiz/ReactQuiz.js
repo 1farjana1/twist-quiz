@@ -7,7 +7,7 @@ const ReactQuiz = () => {
     const reactAllQuiz = useLoaderData().data.questions;
     console.log(reactAllQuiz);
     return (
-        <div>
+        <div className='all-questions me-5 ms-5 mt-5 bg-light rounded'>
             {
                 reactAllQuiz.map(quiz => <Questions
                     key={quiz.id}

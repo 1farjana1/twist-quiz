@@ -1,6 +1,9 @@
 .question {
-    border: 2px solid blue;
-    height: 200px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    height: 300px;
+    margin: 30px 0px;
+    padding: 20px;
 }
 
 .options {
