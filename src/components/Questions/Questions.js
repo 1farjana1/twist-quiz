@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Option from '../Option/Option';
 import './Questions.css'
 import { ToastContainer, toast } from 'react-toastify';
@@ -7,10 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 
 const Questions = ({ quiz }) => {
+    // console.log(quiz)
     const { question, options, correctAnswer } = quiz;
 
     const handleCorrectAnswer = (option) => {
-        console.log("clicked", option);
         if (correctAnswer === option) {
             toast.success("True");
         }

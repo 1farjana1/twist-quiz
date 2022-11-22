@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Quiz.css'
 
 const Quiz = ({ quiz }) => {
-    // console.log(quiz)
+    console.log(quiz)
     const { name, logo, total, id } = quiz;
     return (
         <div className='quiz'>

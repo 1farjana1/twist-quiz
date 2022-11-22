@@ -1,13 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Link, RouterProvider } from 'react-router-dom';
 import Main from './layout/Main';
 import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 import ReactQuiz from './components/ReactQuiz/ReactQuiz';
-import CSSQuiz from './components/CSSQuiz/CSSQuiz';
-import JSQuiz from './components/JSQuiz/JSQuiz';
+
 
 function App() {
   const router = createBrowserRouter([
@@ -36,13 +35,15 @@ function App() {
           element: <ReactQuiz></ReactQuiz>
         },
         {
-          path: '/cssQuiz',
-          element: <CSSQuiz></CSSQuiz>
-        },
-        {
-          path: '/jsQuiz',
-          element: <JSQuiz></JSQuiz>
-        },
+          path: '/*',
+          element: <div>
+            <h1 className='text-danger mt-5 pt-5'>404</h1>
+            <h1>OPPS!PAGE NOT FOUND</h1>
+            <p>Sorry, the page you're looking for doesn't exist.if you <br />
+              think something is broken,report a problem.</p>
+            <Link to='/home'> <button className='btn btn-success rounded p-3'>RETURN HOME</button></Link>
+          </div>,
+        }
       ]
     }
   ])
