@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Option from '../Option/Option';
 import './Questions.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Questions = ({ quiz }) => {
+    const [quizs, setQuizs] = useState([]);
     const { question, options, correctAnswer } = quiz;
+
+    const handleCorrectAnswer = (option) => {
+        console.log("clicked", option);
+        if (correctAnswer === option) {
+            toast(correctAnswer);
+        }
+    }
+
     return (
         <div className='question'>
             <div>
@@ -13,9 +24,11 @@ const Questions = ({ quiz }) => {
                 {
                     options.map(option => <Option
                         option={option}
+                        handleCorrectAnswer={handleCorrectAnswer}
                     ></Option>)
                 }
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
