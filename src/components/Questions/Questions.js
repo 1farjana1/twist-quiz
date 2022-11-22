@@ -19,11 +19,15 @@ const Questions = ({ quiz }) => {
         }
     }
 
+    const notify = () => {
+        toast.success(correctAnswer);
+    }
+
     return (
         <div className='question'>
             <div className='d-flex justify-content-between align-items-center'>
                 <h2> {question}</h2>
-                <h5><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></h5>
+                <h5><FontAwesomeIcon onClick={notify} icon={faEye}></FontAwesomeIcon></h5>
             </div>
             <div className='options ms-5 me-5 mt-3'>
                 {
