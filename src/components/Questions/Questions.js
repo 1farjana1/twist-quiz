@@ -5,13 +5,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Questions = ({ quiz }) => {
-    const [quizs, setQuizs] = useState([]);
     const { question, options, correctAnswer } = quiz;
 
     const handleCorrectAnswer = (option) => {
         console.log("clicked", option);
         if (correctAnswer === option) {
-            toast(correctAnswer);
+            toast.success("True");
+        }
+        else {
+            toast.error("Wrong");
         }
     }
 
