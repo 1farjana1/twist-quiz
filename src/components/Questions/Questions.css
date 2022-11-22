@@ -1,0 +1,9 @@
+.question {
+    border: 2px solid blue;
+    height: 200px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}

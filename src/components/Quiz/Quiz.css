@@ -1,0 +1,32 @@
+.quiz img {
+    height: 200px;
+}
+
+.quiz {
+    /* border: 2px solid black; */
+    height: 430px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+.btn-quiz {
+    width: 50%;
+    border: none;
+    background-color: #e6b400ec;
+    padding: 13px;
+    border-radius: 10px;
+}
+
+.btn-quiz a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-quiz a:hover {
+    color: white;
+}
+
+.btn-quiz:hover {
+    background-color: rgb(255, 166, 0);
+}

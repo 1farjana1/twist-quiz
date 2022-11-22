@@ -1,0 +1,13 @@
+.image-set {
+    background-image: url(../../images/quiz_5.jpg);
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.all-quiz-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+}
