@@ -3,6 +3,8 @@ import Option from '../Option/Option';
 import './Questions.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
 
 const Questions = ({ quiz }) => {
     const { question, options, correctAnswer } = quiz;
@@ -19,10 +21,11 @@ const Questions = ({ quiz }) => {
 
     return (
         <div className='question'>
-            <div>
+            <div className='d-flex justify-content-between align-items-center'>
                 <h2> {question}</h2>
+                <h5><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></h5>
             </div>
-            <div className='options ms-5 me-5'>
+            <div className='options ms-5 me-5 mt-3'>
                 {
                     options.map(option => <Option
                         option={option}

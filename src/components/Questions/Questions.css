@@ -10,3 +10,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+.question h2 {
+    margin-left: 100px;
+}
