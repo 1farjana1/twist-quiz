@@ -11,7 +11,7 @@ import ReactQuiz from './components/ReactQuiz/ReactQuiz';
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/home',
+      path: '/',
       element: <Main></Main>,
       children: [
         {
